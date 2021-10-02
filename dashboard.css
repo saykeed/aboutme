@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+#navhead{
+    position: fixed;
+    background: #22242A;
+    height: 50px;
+    padding: 10px 2%;
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 1;
+}
+
+
+
+#leftside h5{
+    color: white;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+
+}
+
+#leftside span{
+    color: #1DC4E7;
+    
+}
+
+#logoutbtn{
+    padding: 5px;
+    background: #1DC4E7;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    transition: all .5s;
+}
+
+#logoutbtn:hover{
+    background: #15a3bf;
+}
+
+
+#sidebar{
+    background: #2F323A;
+    margin-top: 50px;
+    position: fixed;
+    left: 0;
+    padding-top: 30px;
+    width: 250px;
+    height: calc(100vh - 50px);
+    overflow: auto;
+    transition: all 0.5s;
+}
+
+#sidebar #profilepic{
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    object-fit: cover;
+    object-position: 0px -74px;
+    margin-bottom: 10px;
+    transition: filter 0.5s;
+}
+
+#sidebar #profilepic:hover{
+    filter: sepia(70%);
+}
+
+#sidebar h4{
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#sidebar a{
+    color: white;
+    display: block;
+    width: 100%;
+    line-height: 57px;
+    text-decoration: none;
+    padding-left: 40px;
+    transition: left .5s;
+}
+
+
+#sidebar a:hover{
+    background: #1DC4E7;
+
+}
+
+#sidebar i{
+    padding-right: 10px;
+
+}
+
+
+
+
+label #sidebar_btn{
+    color: white;
+    position: absolute;
+    left: 300px;
+    top: 14px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .5s;
+}
+
+
+label #sidebar_btn:hover{
+    color: #1DC4E7;
+
+}
+
+#check:checked ~ #sidebar{
+    position: fixed;
+    top: 0;
+    height: calc(100vh - 50px);
+    margin: 50px 0 0 -190px;
+    
+}
+
+#check:checked ~ #sidebar a span{
+    display: none;
+
+}
+
+#check:checked ~ #sidebar a {
+    font-size: 20px;
+    margin-left: 170px;
+    
+    width: 80px;
+}
+
+#check{
+    display: none;
+}
+
+#main{
+    margin-left: 250px;
+    background: url(moonnight.jpg) no-repeat;
+    
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+    position: relative;
+}
+
+#check:checked ~ #main{
+    margin-left: 60px;
+}
+
+#maininfo{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#main #maininfo h2{
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 35px;
+    color: #18bb18;
+}
+
+#main #maininfo p{
+    font-family: cambria;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+   
+}
+
+#main #maininfo #socialbtn span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.118);
+    transition: all 0.5s;
+    
+}
+
+#main #maininfo #socialbtn span:hover{
+    background: #18bb18;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*for the responsieve screen*/
+@media screen and (max-width:800px){
+    
+    #logoutbtn{
+        display: none;
+    }
+
+    label #sidebar_btn{
+        position: absolute;
+        left: 2%;
+    }
+
+    #leftside h5{
+        position: absolute;
+        top: 14px;
+        right: 2%;
+    }
+
+    
+
+    
+    
+
+}
+
+
+
+
+/*
+        #sidebar{
+        position: fixed;
+        top: 0;
+        height: calc(100vh - 50px);
+        margin: 50px 0 0 0;
+        
+    }
+
+    #sidebar a span{
+        display: none;
+    
+    }
+
+    #sidebar a {
+        font-size: 20px;
+        margin-left: 170px;
+        line-height: 50px;
+        width: 80px;
+        scrollbar-width: none;
+        
+    }
+
+    #main{
+        margin-left: 60px;
+    }
+
+
+    #check:checked ~ #sidebar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: calc(100vh - 50px);
+        margin-top: 50px;
+        margin-left: 0;
+        
+        
+    }
+
+    #check:checked ~ #sidebar a span{
+        display: inline;
+    
+    }
+
+    #check:checked ~ #sidebar a {
+        padding-left: 40px;
+        width: 100%;
+        line-height: 57px;
+        margin-left: 0;
+        
+    }
+
+   
+*/
